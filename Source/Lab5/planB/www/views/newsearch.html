@@ -1,0 +1,32 @@
+<ion-header-bar class="bar bar-header bar-energized">
+    <button class="button icon ion-navicon-round "></button>
+    <h1 class="title">We will make it this time!</h1>
+    <button class="button button-icon icon ion-log-out"></button>
+</ion-header-bar>
+<ion-content>
+    <div class="bar bar-header item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input id="search-entry" ng-model="searchEntry" type="search" placeholder="Search">
+        </label>
+        <button id="search-btn" class="button button-clear button-energized" type="button" ng-click="search(searchEntry)">Search</button>
+
+    </div>
+    <div class="list">
+        <a class="item item-thumbnail-left" href="#" ng-repeat="item in items">
+            <img src={{"item."}}>
+           <h2>{{item.name}}</h2>
+            <p>{{item.url}}</p>
+            <p>{{item.formattedPhone}}</p>
+            <p>{{item.id}}</p>
+        </a>
+        <!-- <a class="item item-avatar" href="#" ng-repeat="item in items">
+            <h2>{{item.name}}</h2>
+            <p>{{item.url}}</p>
+        </a> -->
+
+    </div>
+</ion-content>
+<ion-footer-bar>
+    <div class="bar bar-footer"></div>
+</ion-footer-bar>
